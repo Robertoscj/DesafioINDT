@@ -25,7 +25,6 @@ API para gerenciamento de rotas de viagem e busca do melhor preço entre destino
 1. Clone o repositório:
 ```bash
 git clone https://github.com/Robertoscj/DesafioINDT.git
-cd [nome-do-repositorio]
 ```
 
 2. Navegue até o diretório do projeto:
@@ -106,3 +105,15 @@ A documentação completa da API está disponível através do Swagger UI, que p
 - Documentação interativa via Swagger
 - Testes automatizados
 - Tratamento de erros padronizado 
+
+💾 Configurando o SQL Server
+O projeto também está pronto para rodar utilizando o SQL Server como banco de dados principal. 
+Todos os scripts necessários para criação do banco e carga de dados estão localizados na pasta:
+/TravelRoutes.Infrastructure/Scripts
+
+📂 Conteúdo da pasta /TravelRoutes.Infrastructure/Scripts
+create_database.sql - Criação do banco TravelRoutesDB
+InsertRoutes.sql - Inserção de dados iniciais para testes
+Routes.sql - Criação da tabela principail
+
+
