@@ -49,8 +49,16 @@ namespace TravelRoutes.Application.Services
             {
                 throw new ArgumentException($"Route with id {route.Id} not found");
             }
-            await _routeRepository.UpdateAsync(route);
+
+    
+            existingRoute.Origin = route.Origin ?? existingRoute.Origin;
+            existingRoute.Destination = route.Destination ?? existingRoute.Destination;
+            existingRoute.Cost = route.Cost != 0 ? route.Cost : existingRoute.Cost;
+
+            await _routeRepository.UpdateAsync(existingRoute);
         }
+
+
 
         public async Task<(List<string> Path, decimal TotalCost)> FindCheapestRoute(string origin, string destination)
         {

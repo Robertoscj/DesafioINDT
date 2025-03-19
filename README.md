@@ -24,7 +24,7 @@ API para gerenciamento de rotas de viagem e busca do melhor preço entre destino
 
 1. Clone o repositório:
 ```bash
-git clone [url-do-repositorio]
+git clone https://github.com/Robertoscj/DesafioINDT.git
 cd [nome-do-repositorio]
 ```
 
@@ -97,13 +97,6 @@ A API implementa:
 
 A documentação completa da API está disponível através do Swagger UI, que pode ser acessado ao executar a aplicação e navegar para http://localhost:5101
 
-## 🤝 Contribuindo
-
-1. Faça o fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
 
 ## ✨ Funcionalidades Principais
 

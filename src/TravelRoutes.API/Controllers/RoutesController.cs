@@ -107,16 +107,17 @@ namespace TravelRoutes.API.Controllers
             {
                 var route = _mapper.Map<RouteEntity>(routeDto);
                 await _routeService.UpdateRoute(route);
-                return NoContent();
+                return Ok(new { message = "Rota atualizada com sucesso" });
             }
             catch (ArgumentException ex)
             {
                 return NotFound(ex.Message);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return StatusCode(500, new { message = "An error occurred while updating the route" });
+                return StatusCode(500, new { message = $"Erro ao atualizar a rota: {ex.Message}" });
             }
+
         }
 
         /// <summary>
@@ -132,7 +133,7 @@ namespace TravelRoutes.API.Controllers
         public async Task<IActionResult> DeleteRoute(int id)
         {
             await _routeService.DeleteRoute(id);
-            return NoContent();
+            return Ok(new { message = "Rota removida com sucesso" });
         }
 
         /// <summary>
